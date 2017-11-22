@@ -99,11 +99,28 @@
         {
             let data = require(jsonFile);
 
+            let pwa = _.find(data.reportCategories, { 'id': 'pwa' });
+            let performance = _.find(data.reportCategories, { 'id': 'performance' });
+            let accessibility = _.find(data.reportCategories, { 'id': 'accessibility' });
+            let bestpractices = _.find(data.reportCategories, { 'id': 'best-practices' });
+
             // Returns relevant data only
             return {
-                score: {
-                    score: Math.round(data.score),
-                    keyword: data.score >= 50 ? (data.score >= 90 ? 'green' : 'orange') : 'red'
+                pwa: {
+                    score: Math.round(pwa.score),
+                    keyword: pwa.score >= 50 ? (pwa.score >= 90 ? 'green' : 'orange') : 'red'
+                },
+                performance: {
+                    score: Math.round(performance.score),
+                    keyword: performance.score >= 50 ? (performance.score >= 90 ? 'green' : 'orange') : 'red'
+                },
+                accessibility: {
+                    score: Math.round(accessibility.score),
+                    keyword: accessibility.score >= 50 ? (accessibility.score >= 90 ? 'green' : 'orange') : 'red'
+                },
+                bestpractices: {
+                    score: Math.round(bestpractices.score),
+                    keyword: bestpractices.score >= 50 ? (bestpractices.score >= 90 ? 'green' : 'orange') : 'red'
                 }
             };
         };

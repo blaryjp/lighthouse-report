@@ -62,8 +62,14 @@
             template = template.replace(new RegExp('{{encoded_url}}', 'g'), encodeURIComponent(data.url));
 
             template = template.replace(new RegExp('{{filename.html}}', 'g'), data.filename.html);
-            template = template.replace(new RegExp('{{infos.score.score}}', 'g'), data.infos.score.score);
-            template = template.replace(new RegExp('{{infos.score.keyword}}', 'g'), data.infos.score.keyword);
+            template = template.replace(new RegExp('{{infos.pwa.score}}', 'g'), data.infos.pwa.score);
+            template = template.replace(new RegExp('{{infos.pwa.keyword}}', 'g'), data.infos.pwa.keyword);
+            template = template.replace(new RegExp('{{infos.performance.score}}', 'g'), data.infos.performance.score);
+            template = template.replace(new RegExp('{{infos.performance.keyword}}', 'g'), data.infos.performance.keyword);
+            template = template.replace(new RegExp('{{infos.accessibility.score}}', 'g'), data.infos.accessibility.score);
+            template = template.replace(new RegExp('{{infos.accessibility.keyword}}', 'g'), data.infos.accessibility.keyword);
+            template = template.replace(new RegExp('{{infos.bestpractices.score}}', 'g'), data.infos.bestpractices.score);
+            template = template.replace(new RegExp('{{infos.bestpractices.keyword}}', 'g'), data.infos.bestpractices.keyword);
 
             return template.replace(/{{[a-z._]+}}/g, '--');
         }
