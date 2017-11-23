@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Lighthouse Report ({{url}})</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <style>
+            html, body, div, h1, h2, h3, h4, p, span, i, hr, table, tbody, tr, td, button
+            {
+                margin      : 0;
+                padding     : 0;
+                border      : 0;
+                outline     : 0;
+                box-sizing  : border-box;
+                font-family : Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight : 400;
+                color       : #333333;
+            }
+
+            body
+            {
+                padding-bottom : 10px;
+            }
+
+            h1
+            {
+                padding       : 20px;
+                background    : linear-gradient(to bottom, #fafafa, #f5f5f5);
+                border-bottom : 1px solid #eeeeee;
+                font-size     : 28px;
+                line-height   : 34px;
+            }
+
+            .overall
+            {
+                position    : relative;
+                margin      : 20px;
+                font-size   : 22px;
+                line-height : 38px;
+                white-space : nowrap;
+                overflow    : hidden;
+            }
+
+            .overall:after
+            {
+                content    : ' ';
+                display    : block;
+                position   : absolute;
+                top        : 0;
+                right      : 0;
+                width      : 50px;
+                height     : 100%;
+                background : linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+            }
+
+            .overall a,
+            .overall a:visited
+            {
+                color           : inherit;
+                text-decoration : none;
+            }
+
+            .result
+            {
+                margin  : 10px 20px 10px 20px;
+                padding : 15px;
+                border  : 1px solid #cccccc;
+            }
+
+            .result:after
+            {
+                content : ' ';
+                display : block;
+                clear   : both;
+            }
+
+            .heading
+            {
+                position : relative;
+            }
+
+            h2
+            {
+                font-weight : normal;
+                font-size   : 16px;
+                line-height : 36px;
+                white-space : nowrap;
+                overflow    : hidden;
+            }
+
+            h2 a,
+            h2 a:visited
+            {
+                color           : inherit;
+                text-decoration : none;
+            }
+
+            .button,
+            .button:visited
+            {
+                display          : inline-block;
+                float            : left;
+                margin           : 3px 0 0 0;
+                background-image : linear-gradient(to bottom, #4d90fe, #4787ed);
+                border           : 1px solid #3079ed;
+                color            : #ffffff;
+                padding          : 6px 9px 6px 9px;
+                font-size        : 12px;
+                font-weight      : 700;
+                border-radius    : 2px;
+                text-transform   : uppercase;
+                text-decoration  : none;
+            }
+
+            .button i
+            {
+                color     : #ffffff;
+                font-size : 10px;
+                float     : left;
+                margin    : 3px 8px 0 0;
+            }
+
+            .scores
+            {
+                position    : absolute;
+                top         : 0;
+                right       : 0;
+                background  : #ffffff;
+                line-height : normal;
+            }
+
+            .scores:after
+            {
+                content    : ' ';
+                display    : block;
+                position   : absolute;
+                top        : 0;
+                left       : -50px;
+                width      : 50px;
+                height     : 100%;
+                background : linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+            }
+
+            .score-item
+            {
+                display   : inline-block;
+                font-size : 14px;
+                margin    : 0 0 0 15px;
+            }
+
+            .score-item .fa
+            {
+                float : left;
+            }
+
+            .score-item .fa-desktop
+            {
+                font-size : 17px;
+                margin    : 11px 6px 0 0;
+            }
+
+            .score-item .fa-mobile
+            {
+                font-size : 24px;
+                margin    : 7px 6px 0 0;
+            }
+
+            .score-item .score
+            {
+                position   : relative;
+                display    : inline-block;
+                color      : #ffffff;
+                padding    : 12px 8px 4px 8px;
+                background : #cccccc;
+                min-width: 75px;
+            }
+
+            .score-item .red
+            {
+                background : red;
+            }
+
+            .score-item .orange
+            {
+                background : orange;
+            }
+
+            .score-item .green
+            {
+                background : green;
+            }
+
+            .score-item .type
+            {
+                position  : absolute;
+                color     : #ffffff;
+                top       : 2px;
+                left      : 8px;
+                font-size : 9px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Lighthouse Report
+        </h1>
+        <div class="overall">
+            <a href="{{url}}" target="_blank">{{url}}</a>
+        </div>
+        <!--results-->
+    </body>
+</html>

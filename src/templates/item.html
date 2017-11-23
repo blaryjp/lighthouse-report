@@ -1,0 +1,39 @@
+<div class="result">
+    <div class="heading">
+        <h2>
+            <a href="{{url}}" target="_blank">
+                {{url}}
+            </a>
+        </h2>
+        <div class="scores">
+            <a class="button" href="lighthouse/{{filename.html}}">
+                <i class="fa fa-play"></i>
+                See the report
+            </a>
+            <div class="score-item">
+                <span class="score {{infos.pwa.keyword}}">
+                    <span class="type">PWA</span>
+                    {{infos.pwa.score}} / 100
+                </span>
+            </div>
+            <div class="score-item">
+                <span class="score {{infos.performance.keyword}}">
+                    <span class="type">Performance</span>
+                    {{infos.performance.score}} / 100
+                </span>
+            </div>
+            <div class="score-item">
+                <span class="score {{infos.accessibility.keyword}}">
+                    <span class="type">Accessibility</span>
+                    {{infos.accessibility.score}} / 100
+                </span>
+            </div>
+            <div class="score-item">
+                <span class="score {{infos.bestpractices.keyword}}">
+                    <span class="type">Best Practices</span>
+                    {{infos.bestpractices.score}} / 100
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
