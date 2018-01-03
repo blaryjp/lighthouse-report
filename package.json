@@ -30,9 +30,9 @@
   "dependencies": {
     "async": "^2.6.0",
     "colors": "^1.1.2",
-    "commander": "^2.11.0",
-    "crawler": "^1.1.1",
-    "lighthouse": "^2.6.0",
+    "commander": "^2.12.2",
+    "crawler": "^1.1.2",
+    "lighthouse": "^2.7.0",
     "lodash": "^4.17.4",
     "shelljs": "^0.7.8",
     "sitemapper": "^2.1.13"
