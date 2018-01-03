@@ -70,6 +70,8 @@
             template = template.replace(new RegExp('{{infos.accessibility.keyword}}', 'g'), data.infos.accessibility.keyword);
             template = template.replace(new RegExp('{{infos.bestpractices.score}}', 'g'), data.infos.bestpractices.score);
             template = template.replace(new RegExp('{{infos.bestpractices.keyword}}', 'g'), data.infos.bestpractices.keyword);
+            template = template.replace(new RegExp('{{infos.seo.score}}', 'g'), data.infos.seo.score);
+            template = template.replace(new RegExp('{{infos.seo.keyword}}', 'g'), data.infos.seo.keyword);
 
             return template.replace(/{{[a-z._]+}}/g, '--');
         }

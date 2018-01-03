@@ -103,6 +103,7 @@
             let performance = _.find(data.reportCategories, { 'id': 'performance' });
             let accessibility = _.find(data.reportCategories, { 'id': 'accessibility' });
             let bestpractices = _.find(data.reportCategories, { 'id': 'best-practices' });
+            let seo = _.find(data.reportCategories, { 'id': 'seo' });
 
             // Returns relevant data only
             return {
@@ -121,6 +122,10 @@
                 bestpractices: {
                     score: Math.round(bestpractices.score),
                     keyword: bestpractices.score >= 50 ? (bestpractices.score >= 90 ? 'green' : 'orange') : 'red'
+                },
+                seo: {
+                    score: Math.round(seo.score),
+                    keyword: seo.score >= 50 ? (seo.score >= 90 ? 'green' : 'orange') : 'red'
                 }
             };
         };
