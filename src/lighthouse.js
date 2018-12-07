@@ -99,32 +99,38 @@
         {
             let data = require(jsonFile);
 
-            let pwa = _.find(data.reportCategories, { 'id': 'pwa' });
-            let performance = _.find(data.reportCategories, { 'id': 'performance' });
-            let accessibility = _.find(data.reportCategories, { 'id': 'accessibility' });
-            let bestpractices = _.find(data.reportCategories, { 'id': 'best-practices' });
-            let seo = _.find(data.reportCategories, { 'id': 'seo' });
+            let pwa = _.find(data.categories, { 'id': 'pwa' });
+            let performance = _.find(data.categories, { 'id': 'performance' });
+            let accessibility = _.find(data.categories, { 'id': 'accessibility' });
+            let bestpractices = _.find(data.categories, { 'id': 'best-practices' });
+            let seo = _.find(data.categories, { 'id': 'seo' });
+
+            pwa.score = Math.round(pwa.score * 100);
+            performance.score = Math.round(performance.score * 100);
+            accessibility.score = Math.round(accessibility.score * 100);
+            bestpractices.score = Math.round(bestpractices.score * 100);
+            seo.score = Math.round(seo.score * 100);
 
             // Returns relevant data only
             return {
-                pwa: {
-                    score: Math.round(pwa.score),
-                    keyword: pwa.score >= 50 ? (pwa.score >= 90 ? 'green' : 'orange') : 'red'
-                },
                 performance: {
-                    score: Math.round(performance.score),
+                    score: performance.score,
                     keyword: performance.score >= 50 ? (performance.score >= 90 ? 'green' : 'orange') : 'red'
                 },
+                pwa: {
+                    score: pwa.score,
+                    keyword: pwa.score >= 50 ? (pwa.score >= 90 ? 'green' : 'orange') : 'red'
+                },
                 accessibility: {
-                    score: Math.round(accessibility.score),
+                    score: accessibility.score,
                     keyword: accessibility.score >= 50 ? (accessibility.score >= 90 ? 'green' : 'orange') : 'red'
                 },
                 bestpractices: {
-                    score: Math.round(bestpractices.score),
+                    score: bestpractices.score,
                     keyword: bestpractices.score >= 50 ? (bestpractices.score >= 90 ? 'green' : 'orange') : 'red'
                 },
                 seo: {
-                    score: Math.round(seo.score),
+                    score: seo.score,
                     keyword: seo.score >= 50 ? (seo.score >= 90 ? 'green' : 'orange') : 'red'
                 }
             };

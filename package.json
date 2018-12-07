@@ -15,27 +15,30 @@
     "report",
     "spider"
   ],
-  "authors": [{
-    "name": "blaryjp",
-    "url": "https://github.com/blaryjp"
-  }, {
-    "name": "Johan Satgé",
-    "url": "http://johansatge.com"
-  }],
+  "authors": [
+    {
+      "name": "blaryjp",
+      "url": "https://github.com/blaryjp"
+    },
+    {
+      "name": "Johan Satgé",
+      "url": "http://johansatge.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/blaryjp/lighthouse-report/issues"
   },
   "homepage": "https://github.com/blaryjp/lighthouse-report",
   "dependencies": {
-    "async": "^2.6.0",
-    "colors": "^1.1.2",
-    "commander": "^2.12.2",
-    "crawler": "^1.1.2",
-    "lighthouse": "^3.2.1",
-    "lodash": "^4.17.4",
-    "shelljs": "^0.7.8",
-    "sitemapper": "^2.1.13"
+    "async": "^2.6.1",
+    "colors": "^1.3.2",
+    "commander": "^2.19.0",
+    "crawler": "^1.2.0",
+    "lighthouse": "^4.0.0-alpha.2-3.2.1",
+    "lodash": "^4.17.11",
+    "shelljs": "^0.8.3",
+    "sitemapper": "^2.2.0"
   },
   "devDependencies": {}
 }
